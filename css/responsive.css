@@ -1,0 +1,49 @@
+@media only screen and (max-width: 950px) {
+
+    .flex-item,
+    .contact-iframe {
+        flex-basis: 100%;
+    }
+
+    .contact-iframe {
+        height: 400px;
+        margin: 0;
+    }
+
+    .contact-us {
+        text-align: right;
+    }
+
+    .contact-details {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #menu {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        height: 80px;
+    }
+
+    .contact-address,
+    .contact-us {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    section {
+        padding: 50px 0px 0px;
+    }
+
+    .flex-item {
+        margin: 0 0 5%;
+    }
+
+    footer {
+        height: 110px;
+    }
+
+}
