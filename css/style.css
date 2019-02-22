@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: no-repeat left center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    background-image: url('../img/title.jpg');
+}
+
+body.body-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../img/title.jpg');
+}
+
+li {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+h1 {
+    font-size: 5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    color:silver;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 75px;
+    text-align: center;
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+
+p {
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+}
+
+section {
+    margin-bottom: 75vh;
+    padding: 100px 50px;
+    background-color:white;
+}
+
+
+
+h2::before,
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 0px;
+    border-top: 1px solid #000;
+    transition: all .25s;
+    width: 50px;
+}
+
+h2::before {
+    left: 50%;
+}
+
+h2::after {
+    right: 50%;
+}
+
+h2:hover::before,
+h2:hover::after {
+    width: 2px;
+    height: 2px;
+    background-color: black;
+}
+
+
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.flex-item {
+    height: 400px;
+    flex-basis: 48%;
+    margin: 15px auto;
+}
+
+
+.image-container {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.image-label {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 400px;
+    position: absolute;
+    transition: line-height 0.15s;
+}
+
+.image-label:hover {
+    line-height: 150px;
+}
+
+.image-text {
+    font-size: 1.25rem;
+    line-height: 2.5rem;
+    padding: 0 35px;
+    color:white;
+}
+
+.image-text > li {
+    list-style: none;
+}
+
+.display-none {
+    display: none;
+}
+
+
+/* menu nav design */
+
+#menu {
+    background-color: silver;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 60px;
+    z-index: 99;
+    color:black;
+}
+
+#menu > ul {
+    text-align: center;
+}
+
+#menu > ul > li {
+    display: inline-block;
+    padding: 20px;
+}
+
+.nav-link {
+    color: white;
+    padding-top: 2px;
+    position: relative;
+}
+
+.nav-icon-link {
+    font-size: 1.65rem;
+    color: white;
+    margin: 0 5px;
+}
+
+.nav-icon:hover {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+.nav-link::before,
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: -5px;
+    border-top: 1px solid white;
+    transition: all .25s;
+    width: 50%;
+}
+
+.nav-link::before {
+    left: 50%;
+}
+
+.nav-link::after {
+    right: 50%;
+}
+
+.nav-link:hover::before,
+.nav-link:hover::after {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+}
+
+.nav-link:hover::before {
+    left: 49%;
+}
+
+.nav-link:hover::after {
+    right: 49%;
+}
+
+
+
+#header {
+    width: 100%;
+    height: 100vh;
+    
+}
+
+#main-header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+
+/*  sushi rolls examples */
+
+#hosomak {
+    background-image: url('../img/hoso.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#hosomak:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/hoso.jpg');
+}
+
+#futomak {
+    background-image: url('../img/futo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#futomak :hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/futo.jpg');
+}
+
+#uromak{
+    background-image: url('../img/uromaki.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#uromak:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/uromaki.jpg');
+}
+
+#nigiri {
+    background-image: url('../img/nigiri.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#nigiri:hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/nigiri.jpg');
+}
+
+#sashimi {
+    background-image: url("../img/sashimi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#sashimi :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/sashimi.jpg");
+}
+
+#mixedsushi{
+    background-image: url("../img/mixed.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#mixedsushi :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/mixed.jpg");
+}
+
+
+
+
+/* lunch menu */
+
+#lunch-one{
+    background-image: url('../img/lunch1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lunch-one :hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/lunch1.jpg');
+}
+
+#lunch-two {
+    background-image: url('../img/lunch2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lunch-two :hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/lunch2.jpg');
+}
+
+#lunch-three {
+    background-image: url('../img/lunch3.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lunch-three :hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/lunch3.jpg');
+}
+
+#lunch-four {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('../img/lunch4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#lunch-four :hover {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../img/lunch4.jpg');
+}
+
+/* other menu design */
+
+#bowl{
+    background-image: url("../img/bowls.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#bowl :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/bowls.jpg");
+}
+#ramen {
+    background-image: url("../img/ramen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#ramen :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/ramen.jpg");
+}
+
+#salad{
+    background-image: url("../img/salad.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#salad :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/salad.jpg");
+}
+
+#beverages{
+    background-image: url("../img/tea.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#beverages :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/tea.jpg");
+}
+
+/* about section design */
+
+#chef{
+    background-image: url("../img/chef.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#chef :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/chef.jpg");
+}
+#quality {
+    background-image: url("../img/fresh.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#quality :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/fresh.jpg");
+}
+
+#place{
+    background-image: url("../img/place.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#place :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/place.jpg");
+}
+
+#history{
+    background-image: url("../img/hisory.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#history :hover{
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/hisory.jpg");
+}
+
+
+/* contact part design */
+
+#contact {
+    margin-bottom: 0px;
+}
+
+.contact-address {
+    flex-basis: 200px;
+}
+
+.contact-us {
+    flex-basis: auto;
+}
+
+.contact-details address,
+.contact-details address a {
+    color: #000;
+    font-style: normal;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.contact-details a:visited {
+    color: #000;
+}
+
+.contact-details i {
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+.contact-details i:hover {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+}
+
+a.bold-hover:hover {
+    font-weight: bold;
+}
+
+.bold {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-iframe {
+    height: 225px;
+    flex-basis: 48%;
+    margin: 0 1%;
+}
+
+.contact-iframe iframe {
+    width: 100%;
+    height: 100%;
+    border-width: 0;
+}
+
+/* footer design */
+
+footer {
+    background-color: black ;
+    width: 100%;
+    height: 30px;
+    color: white;
+}
+
+footer p {
+    font-size: 9px;
+    line-height: 30px;
+    margin: 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+}
